@@ -14,11 +14,12 @@
     <h1>Fairisle Pattern Generator</h1>
     <p>Instructions go here...</p>
     <h2>Colour</h2>
-    <button type="button" class="btn btn-light" name="Red">Red</button>
-    <button type="button" class="btn btn-light" name="Green">Green</button>
-    <button type="button" class="btn btn-light" name="Blue">Blue</button>
-    <button type="button" class="btn btn-light" name="Black">Black</button>
-    <button type="button" class="btn btn-light" name="White">White</button>
+    <button type="button" class="btn btn-light" name="Blank">Blank</button>
+    <button type="button" class="btn btn-light" name="X">X</button>
+    <button type="button" class="btn btn-light" name="Slash">/</button>
+    <button type="button" class="btn btn-light" name="GT">></button>
+    <button type="button" class="btn btn-light" name="O">O</button>
+    <button type="button" class="btn btn-light" name="Hash">#</button>
 
     <h2>Pattern</h2>
     <style>
@@ -31,6 +32,7 @@
         padding: 0;
         width: 15px;
         height: 15px;
+        text-align: center;
       }
       .demo tr {
         line-height: 15px;
@@ -16820,27 +16822,30 @@
       const buttons = document.querySelectorAll('button');
 
       // Set colour
-      let colour = "#000000"
+      let fill = " ";
 
       // Handle the click event on cells
       function handleCell(e) {
-        this.style.backgroundColor = colour;
+        //this.style.backgroundColor = colour;
+        this.innerHTML = fill;
       }
 
       // Handle the click event on buttons
       function handleButton(e) {
         console.log(this.name);
-        if (this.name == "Red")
-          colour = "#FF0000";
-        else if (this.name == "Green")
-          colour = "#00FF00";
-        else if (this.name == "Blue")
-          colour = "#0000FF";
-        else if (this.name == "Black")
-          colour = "#000000";
-        else if (this.name == "White")
-          colour = "#FFFFFF";
-        console.log(colour);
+        if (this.name == "Blank")
+          fill = " ";
+        else if (this.name == "X")
+          fill = "X";
+        else if (this.name == "Slash")
+          fill = "/";
+        else if (this.name == "GT")
+          fill = ">";
+        else if (this.name == "O")
+          fill = "O";
+        else if (this.name == "Hash")
+          fill = "#";
+        console.log(fill);
       }
 
       // Add event listener to each cell
