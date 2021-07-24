@@ -7,6 +7,7 @@ const buttons = document.querySelectorAll('button');
 // Get all the rows
 const rows = document.querySelectorAll('tr');
 let rowCount = 0;
+let rowID = 0;
 
 // Set colour
 let fill = " ";
@@ -45,4 +46,10 @@ buttons.forEach(button => button.addEventListener('click', handleButton));
 
 // Count the rows
 rows.forEach(row => rowCount++);
-console.log(rowCount);
+rowID = rowCount;
+
+// Update the first cell in each row
+rows.forEach(function(row) {
+  row.querySelector("td").innerHTML = rowID;
+  rowID--;
+});
