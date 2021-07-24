@@ -5,12 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "edge",
-            "version": "stable",
+            "type": "pwa-msedge",
             "request": "launch",
-            "name": "Launch Edge against localhost",
-            "timeout": 20000,
-            "file": "${workspaceFolder}/index.html"
+            "name": "Open index.html",
+            "file": "/Users/lewis/Code/FairislePatternWeb/index.html"
         }
     ]
 }
