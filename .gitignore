@@ -351,3 +351,6 @@ MigrationBackup/
 
 # Exclude configfile with API key
 config.js
+
+# Exclude .vscode folder
+.vscode
