@@ -1,3 +1,5 @@
+// @ts-check
+
 // Get all cells
 const cells = document.querySelectorAll('td');
 
@@ -50,6 +52,6 @@ rowID = rowCount;
 
 // Update the first cell in each row
 rows.forEach(function(row) {
-  row.querySelector("td").innerHTML = rowID;
+  row.querySelector("td").innerHTML = rowID.toString();
   rowID--;
 });
